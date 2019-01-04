@@ -1,0 +1,149 @@
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+@mixin font-face($font-name, $file-name, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $font-name;
+    src: url("fonts/#{$file-name}.eot");
+    src: url("fonts/#{$file-name}.eot?#iefix") format("embedded-opentype"),
+         url("fonts/#{$file-name}.woff2") format("woff2"),
+         url("fonts/#{$file-name}.woff") format("woff"),
+         url("fonts/#{$file-name}.ttf") format("truetype"),
+         url("fonts/#{$file-name}.svg#svg#{$file-name}") format("svg");
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@mixin filter($filter){
+  -webkit-filter: $filter;
+  -moz-filter: $filter;
+  filter: $filter;
+}
+
+@mixin transition($property: opacity, $time: .2s, $ease: ease-in-out, $delay: 0s) {
+  transition: $property $time $ease $delay;
+  -moz-transition: $property $time $ease $delay;
+  -webkit-transition: $property $time $ease $delay;
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+//animation-name, duration(in milliseconds), delay, iteration, ease, direction, play-state
+@mixin animation($animation-name, $duration: 200ms, $delay: 0, $iteration: 1, $ease: ease-in-out, $direction: alternate, $play-state: running) {
+  -webkit-animation-name: $animation-name;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-delay: $delay;
+  -webkit-animation-iteration-count: $iteration;
+  -webkit-animation-timing-function: $ease;
+  -webkit-animation-direction: $direction;
+  -webkit-animation-play-state: $play-state;
+  -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -moz-animation-name: $animation-name;
+  -moz-animation-duration: $duration;
+  -moz-animation-delay: $delay;
+  -moz-animation-iteration-count: $iteration;
+  -moz-animation-timing-function: $ease;
+  -moz-animation-direction: $direction;
+  -moz-animation-play-state: $play-state;
+  -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -o-animation-name: $animation-name;
+  -o-animation-duration: $duration;
+  -o-animation-delay: $delay;
+  -o-animation-iteration-count: $iteration;
+  -o-animation-timing-function: $ease;
+  -o-animation-direction: $direction;
+  -o-animation-play-state: $play-state;
+  -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  animation-name: $animation-name;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-iteration-count: $iteration;
+  animation-timing-function: $ease;
+  animation-direction: $direction;
+  animation-play-state: $play-state;
+  animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+// generic transform
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transform-origin($origin){
+
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+// rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// translate
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+// text select
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}

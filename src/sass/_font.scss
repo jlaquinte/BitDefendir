@@ -1,0 +1,40 @@
+#game-container {
+
+}
+// - - - - - -  PLEX - - - - - - //
+
+// BOLD  		700
+// SEMI BOLD	600
+// MEDIUM    		500
+// REGULAR    400
+// LIGHT 		  300
+
+/*@font-face {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}*/
+
+@font-face {
+	font-family: 'DDCHardware-Compressed';
+    src: url('fonts/DDCHardware-Compressed.woff2') format('woff2'),
+        url('fonts/DDCHardware-Compressed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'DDCHardware-Condensed';
+    src: url('fonts/DDCHardware-Condensed.woff2') format('woff2'),
+        url('fonts/DDCHardware-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DDCHardware-Regular';
+    src: url('fonts/DDCHardware-Regular.woff2') format('woff2'),
+        url('fonts/DDCHardware-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

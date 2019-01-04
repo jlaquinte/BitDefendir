@@ -1,0 +1,59 @@
+// SITE
+
+$site-width: 96rem;
+$site-gutter: 7.5%;
+$site-margin: 4rem;
+$site-margin-2: 3rem;
+$site-margin-3: 2rem;
+
+
+// BREAKPOINTS
+
+$desktop-lg: 130rem;
+$desktop: 102.5rem;
+$mobile: 76.8rem;
+
+// FONTS
+
+// $sans: ;
+// $serif: ;
+
+// COLORS
+$woy-bg-black: #080e19;
+$woy-text: #e6e7e7;
+$woy-btn: #54585d;
+$woy-example-answer: #6c7074;
+$woy-bg-disclaimer: #121b23;
+$woy-disclaimer-text: #a0a3a7;
+$woy-black: #000000;
+$woy-darkergrey: #0A0A0A;
+$woy-darkgrey: #141414;
+$woy-medgrey: #7F7F7F;
+$woy-lightgrey: #d9d9d9;
+$woy-offwhite: #EBEBEB;
+$woy-white: #FFFFFF;
+
+$woy-pink: #ed5b9e;
+$woy-yellow: #ffcd66;
+$woy-blue: #4BC7EE;
+
+$woy-pink-tint: #F073AC;
+$woy-yellow-tint: #EDBE60;
+$woy-blue-tint: #66CFF1;
+
+$color-openness: #7CC8FD;
+$color-conscientiousness: #74ECD8;
+$color-anxiousness: #FD73D2;
+$color-agreeableness: #B6DD59;
+$color-extraversion: #B892F4;
+
+
+// EASEING
+$linear: 'linear';
+$expoEaseInOut: cubic-bezier(1, 0, 0, 1);
+$quartEaseInOut: cubic-bezier(0.77, 0, 0.175, 1);
+$quadEaseOut: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$quadEaseInOut: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);

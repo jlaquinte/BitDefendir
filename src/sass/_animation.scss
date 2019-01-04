@@ -1,0 +1,85 @@
+// slide up down
+@include keyframes(slide-up-down) {
+	from {
+		-webkit-transform: translate3d(0, -25%, 0);
+		transform: translate3d(0, -25%, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 25%, 0);
+		transform: translate3d(0, 25%, 0);
+	}
+}
+
+@include keyframes(flash-in){
+	0%{
+		opacity: 0;
+	}
+
+	50%{
+		opacity: 0.5;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+@include keyframes(flash-out){
+	0%{
+		opacity: 1;
+	}
+
+	50%{
+		opacity: 0.5;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
+// rotate 360
+@include keyframes(rotate360) {
+	from {
+		@include transform(rotate(0deg));
+	}
+
+	to {
+		@include transform(rotate(360deg));
+	}
+}
+
+// rotate 360 start90
+@include keyframes(rotate360-start90) {
+	from {
+		@include transform(rotate(90deg));
+	}
+
+	to {
+		@include transform(rotate(450deg));
+	}
+}
+
+// rotate 360 start134
+@include keyframes(rotate360-start134) {
+	from {
+		@include transform(rotate(134deg));
+	}
+
+	to {
+		@include transform(rotate(494deg));
+	}
+}
+
+// opacity
+@include keyframes(opacity) {
+	from {
+		opacity:0;
+	}
+
+	to {
+		opacity:1;
+	}
+}
